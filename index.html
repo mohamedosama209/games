@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Dev Quiz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <section id="home">
+    <h1>Web Dev Quiz</h1>
+    <p class="sub">Eight questions, fifteen seconds each. Faster answers earn more points.</p>
+    <div class="cats">
+      <button type="button" class="cat" data-cat="html"><strong>HTML</strong><span>Structure and meaning</span><em id="best-html"></em></button>
+      <button type="button" class="cat" data-cat="css"><strong>CSS</strong><span>Layout and styling</span><em id="best-css"></em></button>
+      <button type="button" class="cat" data-cat="js"><strong>JavaScript</strong><span>Logic and the browser</span><em id="best-js"></em></button>
+    </div>
+  </section>
+
+  <section id="game" hidden>
+    <div class="top"><span id="catName"></span><span id="qNum"></span><span id="score"></span></div>
+    <div class="timer"><div id="timerFill"></div></div>
+    <h2 id="question"></h2>
+    <div id="options" class="options"></div>
+    <div id="feedback" class="feedback" hidden>
+      <p id="fbText"></p>
+      <button id="nextBtn" type="button" class="primary">Next question</button>
+    </div>
+  </section>
+
+  <section id="result" hidden>
+    <p class="sub" id="resCat"></p>
+    <h2 id="resScore"></h2>
+    <p id="resPoints" class="points"></p>
+    <p id="resMsg"></p>
+    <p id="resBest" class="sub"></p>
+    <div id="missed"></div>
+    <div class="row">
+      <button id="againBtn" type="button" class="primary">Play again</button>
+      <button id="homeBtn" type="button" class="ghost">Choose another topic</button>
+    </div>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
